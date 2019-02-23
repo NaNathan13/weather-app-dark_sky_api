@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
 
                 //Set DOM elements from API
                 locationTimeZone.textContent = data.timezone;
-                temperatureDegree.textContent = temperature;
+                temperatureDegree.textContent = Math.floor(temperature);
                 temperatureDescription.textContent = summary;
 
                 //Formula for celsius
@@ -44,7 +44,7 @@ window.addEventListener('load', () => {
                         temperatureDegree.textContent = Math.floor(celsius);
                     } else {
                         temperatureSpan.textContent = "F";
-                        temperatureDegree.textContent = temperature;
+                        temperatureDegree.textContent = Math.floor(temperature);
                     }
                 });
 
